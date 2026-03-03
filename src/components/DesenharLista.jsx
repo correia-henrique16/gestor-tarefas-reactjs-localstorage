@@ -4,12 +4,12 @@ const DesenharLista = ({lista, onRemover, onRemoverTodas}) => {
         const {nome ,valor, categoria, data} = despesa
 
         return(
-            <li key={id}>
+            <li key={id} class="li-despesa">
                 <p>Despesa: {nome}</p>
                 <p>Valor: {parseFloat(valor).toFixed(2)}€</p>
-                <p>Categoria: {categoria}</p>
-                <p>Data: {data}</p>
-                <button onClick={() => onRemover(id)}>Apagar Despesa</button>
+                <p class="outros-p">Data: {data}</p>
+                <p class="outros-p">Categoria: {categoria}</p>
+                <button class="button btn-apagar" onClick={() => onRemover(id)}>Apagar Despesa</button>
                 <br />
             </li>
         )
@@ -23,8 +23,14 @@ const DesenharLista = ({lista, onRemover, onRemoverTodas}) => {
     } else {
         return(
             <div>
-                <p>Total: {calcularTotal(lista)}€</p>
-                <button onClick={() => onRemoverTodas()}>Apagar todas</button>
+                <div id="total-container">
+                    <p id="total-p">Total: </p>
+                    <p id="total-valor">{calcularTotal(lista)}€</p>
+                </div>
+                <div id="btn-container">
+                    <button className="button btn-apagar" id="btn-apagar-todas" onClick={() => onRemoverTodas()}>Apagar todas</button>
+                </div>
+                
                 <br />
 
                 <ul id="lista-despesas">
@@ -34,6 +40,7 @@ const DesenharLista = ({lista, onRemover, onRemoverTodas}) => {
                     })
                 }
                 </ul>
+
             </div>
             
         )

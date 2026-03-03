@@ -1,6 +1,6 @@
 const Filtro = ({filtro, setFiltro}) => {
     return(
-        <div>
+        <div id="div-filtro">
             <label htmlFor="filtro-input">Filtrar por: </label>
             <select id="filtro-input" value={filtro} onChange={event => {setFiltro(event.target.value)}}>
                 <option value="Nenhum" defaultChecked>Nenhum</option>
