@@ -1,0 +1,11 @@
+:root{
+    --corBackground : #F4F7F8;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: var(--corBackground);
+}
+ 

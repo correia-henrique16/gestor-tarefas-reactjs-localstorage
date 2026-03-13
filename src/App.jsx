@@ -26,10 +26,11 @@ function App() {
       <h1>Gestor de Despesas</h1>
 
       <InputDespesas onAdicionar={adicionarDespesa}/>
+      <section id="container-despesas">
+        <Filtro filtro={filtro} setFiltro={setFiltro}/>
 
-      <Filtro filtro={filtro} setFiltro={setFiltro}/>
-
-      <DesenharLista lista={listaFiltrada} onRemover={removerDespesa} onRemoverTodas={removerTodas}/>
+        <DesenharLista lista={listaFiltrada} onRemover={removerDespesa} onRemoverTodas={removerTodas}/>
+      </section>
     </div>
   )
 }

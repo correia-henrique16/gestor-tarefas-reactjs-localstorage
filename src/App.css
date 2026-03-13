@@ -1,0 +1,169 @@
+:root {
+    --cardsBack: #FFFFFF;
+    --textoPrincipal: #1A1D1F;
+    --textoSecundario: #6F767E;
+    --destaque: #2A85FF;
+    --border-active: #033370;
+    --erro: #FF6A55;
+    --erro-hover: #962718;
+    --total: #7DDE92;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+h1{
+    color: var(--textoPrincipal);
+    text-align: center;
+    font-size: 4rem;
+}
+
+.form-despesas{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0.5rem 3rem;
+    padding: 2.3rem;
+    border: 1px var(--destaque) solid;
+    border-radius: 10px;
+}
+
+.input label{
+    color: var(--textoPrincipal);
+    font-size: 1.2rem;
+}
+
+.input select, .input input{
+    box-sizing: border-box;
+    padding: 0.5rem;
+    border: 2px var(--destaque) solid;
+    border-radius: 10px;
+}
+
+#valor-input{
+    width: 7rem;
+    box-sizing: border-box;
+}
+
+.button{
+    box-sizing: border-box;
+    padding: 0.8rem;
+    background-color: var(--destaque);
+    border: 2px var(--cardsBack) solid;
+    border-radius: 20px;
+    color: var(--cardsBack);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#container-despesas{
+    margin: 0.5rem 3rem;
+    padding: 1rem;
+    border: 1px var(--destaque) solid;
+    border-radius: 10px;
+}
+
+#div-filtro{
+    border-bottom: 1px solid var(--destaque);
+    padding: 1.5rem 2rem;
+    color: var(--textoPrincipal);
+    font-size:0.9rem;
+}
+
+#div-filtro label{
+    padding: 0 0.5rem;
+    font-weight: bold;
+}
+
+#div-filtro select{
+    box-sizing: border-box;
+    padding: 0.2rem;
+    border: 2px var(--destaque) solid;
+    border-radius: 10px;
+}
+
+#lista-vazia {
+    color: var(--erro);
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#total-container{
+    text-align: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+#total-container p{
+    display: inline-block;
+    margin: 1rem 0.5rem;
+}
+#total-p {
+    color: var(--total);
+    font-weight: bold;
+}
+
+#btn-container {
+    text-align: center;
+}
+
+#btn-apagar-todas{
+    margin: 1rem;
+    background-color: var(--erro);
+    font-size: 0.8;
+}
+
+#lista-despesas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 0 3rem;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.li-despesa {
+    background-color: var(--cardsBack);
+    box-sizing: border-box;
+    width: 13rem;
+    text-align: center;
+    animation: none;
+    border: 2px solid var(--destaque);
+    padding: 0.5rem;
+    border-radius: 20px;
+}
+
+.li-despesa p{
+    font-size: 1.1rem;
+}
+
+.outros-p{
+    color: var(--textoSecundario);
+    font-weight: bold;
+}
+
+.btn-apagar{
+    font-size: 0.9rem;
+    background-color: var(--erro);
+}
+
+/* ------------------------------------------------------------ */
+
+input:focus, select {
+    border-color: var(--border-active);
+    outline: none;
+}
+
+#input-btn:hover{
+    background-color: var(--border-active);
+}
+
+#btn-apagar-todas:hover, 
+.btn-apagar:hover{
+    background-color: var(--erro-hover);
+}
